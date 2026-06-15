@@ -456,10 +456,9 @@ python rank.py
 
 This generates:
 - `logs/ranking_report.md` — full per-candidate debug report for top 100
-- `submission_loc_emb_2.csv` — challenge submission file
 
 ### Validate
 
 ```bash
-python validate_submission.py submission_loc_emb_2.csv
+python validate_submission.py submission.csv
 ```
