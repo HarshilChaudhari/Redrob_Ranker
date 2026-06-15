@@ -10,8 +10,8 @@ team_members:
     email: "harshil.22210497@viit.ac.in"
     phone: "+91-8669837942"
 
-github_repo: "https://github.com/YOUR_USERNAME/YOUR_REPO"
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+github_repo: "https://github.com/HarshilChaudhari/Redrob_Ranker"
+sandbox_link: "https://huggingface.co/spaces/Hrs144/Redrob_Ranker"
 reproduce_command: "source $(pyenv root)/versions/3.11.13/envs/india_runs/bin/activate && python rank.py"
 
 compute:
