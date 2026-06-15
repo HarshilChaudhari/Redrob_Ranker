@@ -1,0 +1,54 @@
+team_name: "your-team-name-here"
+
+primary_contact:
+  name: "Harshil Chaudhari"
+  email: "harshil.22210497@viit.ac.in"
+  phone: "+91-8669837942"
+
+team_members:
+  - name: "Harshil Chaudhari"
+    email: "harshil.22210497@viit.ac.in"
+    phone: "+91-8669837942"
+
+github_repo: "https://github.com/YOUR_USERNAME/YOUR_REPO"
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+reproduce_command: "source $(pyenv root)/versions/3.11.13/envs/india_runs/bin/activate && python rank.py"
+
+compute:
+  platform: "MacBook Air M4"
+  cpu_cores: 10
+  ram_gb: 16
+  python_version: "3.11.13"
+  os: "macOS Sequoia 15.7.7"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "OpenCode"
+
+ai_usage_summary: |
+  Used OpenCode to implement the full ranking pipeline: feature engineering
+  (skill taxonomy, title matching, career trajectory, behavioral signals), honeypot
+  detection gates, scoring logic, and CSV output. No candidate data was fed to any LLM.
+
+methodology_summary: |
+  Rule-based ranker with 6 weighted components: skill taxonomy match (40%),
+  title fit (12%), career trajectory (15%), experience bell-curve (15%),
+  location (8%), behavioral signals (10%), with multiplicative behavioral modifier.
+  Skills use a trust multiplier (proficiency x duration x endorsements) and logistic
+  normalization against semi-saturation constant K=8. Title uses 4-tier taxonomy
+  with substring matching. Career trajectory accounts for product/consulting company
+  bonus, Tier-1 title bonus, job hopper penalty, and pure-research penalty.
+  Behavioral modifier penalizes candidates who are not open-to-work, have low
+  recruiter response rates, stale profiles, or long notice periods (floor 0.3).
+  Honeypot gates: education timeline inversion, salary min>max, YOE<0 or >50,
+  expert with zero skill duration. ~4.7s runtime for 100K candidates on CPU.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
