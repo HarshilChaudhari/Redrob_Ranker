@@ -346,7 +346,7 @@ def main():
     print(f"Report generation: {time.time() - t_report:.2f}s", file=sys.stderr)
 
     t5 = time.time()
-    with open("submission_loc_emb_2.csv", "w", newline="") as f:
+    with open("submission.csv", "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["candidate_id", "rank", "score", "reasoning"])
         for rank_idx, (idx, r) in enumerate(zip(top_indices, reasoning_list)):
