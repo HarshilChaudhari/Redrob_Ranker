@@ -1,6 +1,6 @@
 # INDIA RUNS Track — Redrob AI Candidate Ranking
 
-**Team:** your-team-name-here
+**Team:** Trinity
 
 A deterministic, rule-based candidate ranking system for the Redrob Intelligent Candidate Discovery & Ranking Challenge. Scores ~100K candidates for a **Senior AI Engineer — Founding Team** role using 6 weighted components derived from skills, career history, title, location, and behavioral signals. No ML models, no embeddings, no LLMs — runs in ~5 seconds on CPU.
 
